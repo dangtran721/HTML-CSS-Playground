@@ -1,0 +1,9 @@
+/* have to be first import */
+@import url(./variables.css);
+
+@import url(./general.css);
+@import url(./header.css);
+@import url(./main-content.css);
+
+/* alway be the last */
+@import url(./responsive.css);

@@ -1,0 +1,29 @@
+/* Apply to all html  */
+* {
+  box-sizing: border-box; /* slide 39 */
+  margin: 0;
+  padding: 0;
+}
+
+/* body */
+body {
+  background-color: var(--bg-color);
+
+  font-family: var(--font-main);
+
+  color: var(--text-dark);
+
+  line-height: 1.4; /* vertical spacing */
+
+  font-size: var(--fs-body);
+  padding: 40px 20px;
+}
+
+.resume-container {
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  border: 1px solid red;
+  height: 100vh;
+}

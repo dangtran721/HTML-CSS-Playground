@@ -1,0 +1,3 @@
+- Icons: Font Awesome, Devicon
+- Fronts: Google Fonts
+- CSS Variables: https://github.com/trungquandev/trungquandev-public-utilities-algorithms
