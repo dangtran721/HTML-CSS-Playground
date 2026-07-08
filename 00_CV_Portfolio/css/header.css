@@ -30,7 +30,7 @@
 
   position: relative; /* Lesson 44 */
 
-  width: 250px;
+  width: 320px;
 
   box-shadow: var(--shadow-bubble);
 }
