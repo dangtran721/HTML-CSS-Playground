@@ -223,7 +223,7 @@
 }
 
 /* ================== */
-/* Time line */
+/* Timeline */
 /* ================== */
 
 .col-right::before {
@@ -237,74 +237,186 @@
 }
 .section-right {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   padding: 10px 20px 10px 40px;
   max-width: 200px;
 
-  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
-.dot-red {
-  background: var(--color-red);
+/* ================== */
+/* Timeline Dot */
+/* ================== */
+
+.section-right::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
 }
 
 .dot-red::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 25%;
-
-  border-width: 10px 10px 10px 0px;
-  border-style: solid;
-
-  border-color: transparent var(--color-red) transparent transparent;
-}
-
-.dot-green {
-  background: var(--color-green);
+  background: var(--color-red);
 }
 
 .dot-green::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 25%;
-
-  border-width: 10px 10px 10px 0px;
-  border-style: solid;
-
-  border-color: transparent var(--color-green) transparent transparent;
+  background: var(--color-green);
 }
-
-.dot-teal {
+.dot-teal::before {
   background: var(--color-dark-teal);
 }
-
-.dot-teal::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 25%;
-
-  border-width: 10px 10px 10px 0px;
-  border-style: solid;
-
-  border-color: transparent var(--color-dark-teal) transparent transparent;
-}
-
-.dot-orange {
+.dot-orange::before {
   background: var(--color-orange);
 }
 
-.dot-orange::before {
+.tag-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: var(--color-white);
+
+  font-weight: bold;
+  font-family: var(--heading);
+  font-size: 16px;
+
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  text-transform: uppercase;
+
+  left: -25%;
+  top: -10px;
+}
+
+.tag-title::before {
   content: "";
   position: absolute;
+  top: 50%;
   left: -10px;
-  top: 25%;
-
-  border-width: 10px 10px 10px 0px;
+  transform: translateY(-50%);
+  border-width: 12px 12px 12px 0;
   border-style: solid;
+}
 
+.tag-red {
+  background-color: var(--color-red);
+}
+.tag-red::before {
+  border-color: transparent var(--color-red) transparent transparent;
+}
+
+.tag-green {
+  background-color: var(--color-green);
+}
+.tag-green::before {
+  border-color: transparent var(--color-green) transparent transparent;
+}
+
+.tag-teal {
+  background-color: var(--color-dark-teal);
+}
+.tag-teal::before {
+  border-color: transparent var(--color-dark-teal) transparent transparent;
+}
+
+.tag-orange {
+  background-color: var(--color-orange);
+}
+.tag-orange::before {
   border-color: transparent var(--color-orange) transparent transparent;
+}
+
+/* ================== */
+/* Skills */
+/* ================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  gap: 20px 47px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: var(--transition-scale);
+}
+
+.skill-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.skill-item:hover {
+  transform: scale(1.2);
+}
+
+/* ================== */
+/* Abilities */
+/* ================== */
+.abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  gap: 20px 25px;
+}
+
+.abilities-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: var(--transition-scale);
+}
+
+.ability-icon {
+  font-size: 34px;
+
+  margin-bottom: 8px;
+}
+
+.ability-item :hover {
+  transform: scale(1.2);
+}
+
+/* ================== */
+/* Experiences */
+/* ================== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 20px;
+  margin: 10px 0 0 15px;
+  gap: 20px;
+
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-white-soft);
+  box-shadow: var(--shadow-box);
+}
+.experience-item {
+  margin-bottom: 5px;
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-company {
+  font-size: 14px;
+  margin-bottom: 2px;
 }
