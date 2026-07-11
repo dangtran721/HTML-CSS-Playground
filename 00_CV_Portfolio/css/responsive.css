@@ -1,0 +1,19 @@
+/* 2xl: 1536px (Áp dụng cho màn hình desktop nhỏ hơn 1536px) */
+@media (max-width: 1536px) {
+  /* Do max-width cũng chỉ ở 12xx => k cần cái này  */
+}
+/* xl: 1280px (Áp dụng cho màn hình desktop nhỏ hơn 1280px) */
+@media (max-width: 1280px) {
+}
+/* lg: 1024px (Màn hình Laptop nhỏ / Máy tính bảng xoay ngang) */
+@media (max-width: 1024px) {
+}
+/* md: 768px (Màn hình Máy tính bảng / iPad dọc) */
+@media (max-width: 768px) {
+}
+/* sm: 640px (Màn hình Điện thoại di động lớn) */
+@media (max-width: 640px) {
+}
+/* xs: 480px (Màn hình Điện thoại di động nhỏ - Tối ưu nốt các chi tiết cuối cùng) */
+@media (max-width: 480px) {
+}

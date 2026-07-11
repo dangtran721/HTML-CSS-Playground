@@ -239,7 +239,7 @@
   position: relative;
   margin-bottom: 40px;
   padding: 10px 20px 10px 40px;
-  max-width: 200px;
+  /* max-width: 200px; */
 
   /* border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
@@ -289,7 +289,7 @@
   position: relative;
   text-transform: uppercase;
 
-  left: -25%;
+  left: -5%;
   top: -10px;
 }
 
@@ -398,15 +398,15 @@
 /* Experiences */
 /* ================== */
 .experience-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  background-color: var(--bg-white-soft);
   padding: 20px;
   margin: 10px 0 0 15px;
   gap: 20px;
 
   border-radius: var(--border-radius-sm);
-  background-color: var(--bg-white-soft);
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   box-shadow: var(--shadow-box);
 }
 .experience-item {
@@ -419,4 +419,43 @@
 .experience-company {
   font-size: 14px;
   margin-bottom: 2px;
+}
+.experience-company a {
+  font-weight: bold;
+}
+
+.experience-title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.experience-location,
+.experience-date {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ================== */
+/* The End */
+/* ================== */
+.the-end-box {
+  background-color: var(--bg-white-soft);
+  padding: 20px;
+  margin: 10px 0 0 15px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-box);
+}
+
+.the-end-box p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.the-end-box p:nth-child(2) {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--color-orange);
+  font-weight: 600;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-orange);
 }
