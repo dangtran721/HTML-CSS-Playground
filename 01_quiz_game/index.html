@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game by Dang</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ================== -->
+      <!-- Start -->
+      <!-- ================== -->
+
+      <div class="start-screen hidden">
+        <h1 class="start-screen-title">QUIZ TIME!</h1>
+        <p class="start-screen-p">
+          Test your knowledge with these fun question
+        </p>
+        <button class="start-screen-btn">Start Quiz</button>
+      </div>
+      <!-- ================== -->
+      <!-- Quiz container -->
+      <!-- ================== -->
+      <div class="quiz-container hidden">
+        <h3 class="quiz-title">Question title here!</h3>
+        <div class="quiz-info">
+          <p>Question <span class="current-question">1</span> of 5</p>
+          <p>Score: <span class="score">0</span></p>
+        </div>
+        <div class="answer-container">Answer coming from JS file</div>
+        <div class="progress-bar"></div>
+      </div>
+      <!-- ================== -->
+      <!-- Quiz Results -->
+      <!-- ================== -->
+      <div class="quiz-results hidden">
+        <h1 class="quiz-result-title">Quiz Results</h1>
+        <div>
+          <p>Your score <span class="score">0</span> out of 5</p>
+          <p>Good job !</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

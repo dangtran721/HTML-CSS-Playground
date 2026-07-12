@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfb8ad;
+  color: #007ea7;
+}
+
+.container {
+  background-color: #8a3033;
+  border-radius: 20px;
+  border: 3px solid #8a3033;
+  box-shadow: 0 0 100px darkred;
+
+  width: 60%;
+  height: 50vh;
+
+  padding: 50px 20px;
+}
+/* 
+.hidden {
+  display: none;
+} */

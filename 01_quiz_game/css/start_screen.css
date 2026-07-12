@@ -1,0 +1,44 @@
+.start-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  width: 100%;
+  height: 100%;
+  padding: 3.5rem;
+}
+
+.start-screen-title {
+  color: #fd5200;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+
+.start-screen-p {
+  color: darkgray;
+  font-size: 23px;
+  margin-bottom: 50px;
+  letter-spacing: 1.5px;
+}
+
+.start-screen-btn {
+  border: 1px solid #fd5200;
+  background-color: #fd5200;
+  border-radius: 20px;
+  box-shadow: 0 0 100px #fd5200;
+
+  color: azure;
+  font-size: 20px;
+
+  width: 180px;
+  min-height: 40px;
+
+  transition: transform 0.2s ease;
+}
+
+.start-screen-btn:hover {
+  transform: scale(1.05);
+}
