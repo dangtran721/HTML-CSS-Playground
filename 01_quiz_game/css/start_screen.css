@@ -14,12 +14,11 @@
 .start-screen-title {
   color: #fd5200;
   margin-bottom: 20px;
-  font-size: 70px;
+  font-size: 50px;
 }
 
 .start-screen-p {
-  color: darkgray;
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 50px;
   letter-spacing: 1.5px;
 }
