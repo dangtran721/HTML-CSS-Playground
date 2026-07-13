@@ -2,6 +2,12 @@ const screens = document.querySelectorAll(".screen");
 const startBtn = document.querySelector(".start-screen-btn");
 const quizContainerTitle = document.querySelector(".quiz-container-title");
 const answerContainer = document.querySelector(".answer-container");
+const progressBarFill = document.querySelector(".progress-fill");
+const currentQuestion = document.querySelector(".current-question");
+const score = document.querySelector(".score");
+
+let currentQuizId = 0;
+let currentScore = 0;
 
 const questionStorage = [
   {
@@ -60,6 +66,9 @@ const questionStorage = [
   },
 ];
 
+const newStorage = suffer(questionStorage);
+const totalQuestion = newStorage.length;
+
 function showScreen(selector) {
   screens.forEach((el) => {
     el.classList.add("hidden");
@@ -67,8 +76,6 @@ function showScreen(selector) {
 
   document.querySelector(selector).classList.remove("hidden");
 }
-
-showScreen(".start-screen");
 
 function suffer(questionStorage) {
   const questions = [...questionStorage];
@@ -90,16 +97,32 @@ function renderAnswer(answers) {
   });
 }
 
-const newStorage = suffer(questionStorage);
-
 function showQuiz() {
-  const currentQuizId = Math.floor(Math.random() * newStorage.length);
   const currentQuiz = newStorage[currentQuizId];
 
   quizContainerTitle.textContent = currentQuiz.question;
 
   renderAnswer(currentQuiz.answer);
+  progressBarController();
+  quizInfoController();
 }
+function correctAnswerAction(btn) {
+  btn.target.classList.add("correct");
+  currentScore++;
+}
+
+function progressBarController() {
+  const percent = ((currentQuizId + 1) / totalQuestion) * 100;
+
+  progressBarFill.style.width = `${percent}%`;
+}
+
+function quizInfoController() {
+  currentQuestion.textContent = currentQuizId + 1;
+
+  score.textContent = currentScore;
+}
+showScreen(".start-screen");
 
 startBtn.addEventListener("click", () => {
   showScreen(".quiz-container");
@@ -110,7 +133,21 @@ answerContainer.addEventListener("click", (btn) => {
   if (btn.target.tagName !== "BUTTON") {
     return;
   }
+
   const isAnswerCorrect = btn.target.dataset.correct === "true";
 
-  isAnswerCorrect ? console.log("A") : console.log("B");
+  isAnswerCorrect
+    ? correctAnswerAction(btn)
+    : btn.target.classList.add("wrong");
+
+  if (currentQuizId + 1 >= 5) {
+    setTimeout(() => {
+      showScreen(".quiz-results");
+    }, 1000);
+  }
+
+  setTimeout(() => {
+    currentQuizId++;
+    showQuiz();
+  }, 1000);
 });

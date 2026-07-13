@@ -51,6 +51,18 @@
   color: white;
 }
 
+.answer-container button.correct {
+  background: lightgreen;
+  border: 1.5px solid green;
+  color: darkgreen;
+}
+
+.answer-container button.wrong {
+  background: lightcoral;
+  border: 1.5px solid red;
+  color: darkred;
+}
+
 .progress {
   width: 95%;
   height: 10px;
